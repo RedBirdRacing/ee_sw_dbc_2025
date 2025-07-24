@@ -1,0 +1,98 @@
+VERSION ""
+
+
+NS_ :
+
+BS_:
+
+BU_: Vector__XXX
+
+BO_ 2556444915 BMS_HCU_INFO: 8 Vector__XXX
+SG_ BatVoltage : 7|16@0+ (0.1,0) [0|6553.5] "V" Vector__XXX
+SG_ BatCurrent : 23|16@0+ (0.1,-1000) [-1000|5553.5] "A" Vector__XXX
+SG_ BatSoc : 39|8@0+ (1,0) [0|255] "%" Vector__XXX
+SG_ BatSoh : 47|8@0+ (1,0) [0|255] "%" Vector__XXX
+SG_ BatState : 55|4@0+ (1,0) [0|15] "" Vector__XXX
+SG_ BatAlmLv : 51|4@0+ (1,0) [0|15] "" Vector__XXX
+SG_ BatLife : 63|8@0+ (1,0) [0|255] "" Vector__XXX
+
+
+BO_ 2556510451 BMS_HCU_MAXV: 8 Vector__XXX
+SG_ MaxCellVolt : 7|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+SG_ MinCellVolt : 23|16@0+ (1,0) [0|65535] "mV" Vector__XXX
+SG_ MaxCellVoltNo : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+SG_ MinCellVoltNo : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+
+
+BO_ 2556575987 BMS_HCU_MAXT: 8 Vector__XXX
+SG_ MaxTemp : 7|8@0+ (1,-40) [-40|215] "¡æ" Vector__XXX
+SG_ MinTemp : 15|8@0+ (1,-40) [-40|215] "¡æ" Vector__XXX
+SG_ MaxTempNo : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+SG_ MinTempNo : 31|8@0+ (1,0) [0|255] "" Vector__XXX
+SG_ CoolingCtl : 39|8@0+ (1,0) [0|255] "" Vector__XXX
+SG_ HeatingCtl : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+
+
+BO_ 2556641523 BMS_HCU_RELAY: 8 Vector__XXX
+SG_ PosRlyStr : 7|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ NegRlyStr : 5|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ PreRlyStr : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ OnChrRlyStr : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ OffChrRlyStr : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ ChrState : 23|4@0+ (1,0) [0|15] "" Vector__XXX
+SG_ ChrCommunication : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ ChrOFFCC2 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+SG_ ChrONCC : 17|2@0+ (1,0) [0|3] "" Vector__XXX
+SG_ ChrReqVolt : 39|16@0+ (1,0) [0|65535] "" Vector__XXX
+SG_ ChrReqCurr : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+
+
+BO_ 2556707059 BMS_HCU_POWER: 8 Vector__XXX
+SG_ MaxChrCurtLimit : 7|16@0+ (1,0) [0|65535] "A" Vector__XXX
+SG_ MaxDisCurtLimit : 23|16@0+ (1,0) [0|65535] "A" Vector__XXX
+SG_ MaxChrPowerLimit : 39|16@0+ (0.1,0) [0|6553.5] "kW" Vector__XXX
+SG_ MaxDisPowerLimit : 55|16@0+ (0.1,0) [0|6553.5] "kW" Vector__XXX
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "GenSigStartValue" FLOAT -3.4E+038 3.4E+038;
+
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "GenSigStartValue" 0;
+
+BA_ "BusType" "CAN";
+
+BA_ "GenSigStartValue" SG_ 2556444915 BatVoltage 0;
+BA_ "GenSigStartValue" SG_ 2556444915 BatCurrent 10000;
+BA_ "GenSigStartValue" SG_ 2556444915 BatSoc 0;
+BA_ "GenSigStartValue" SG_ 2556444915 BatSoh 0;
+BA_ "GenSigStartValue" SG_ 2556444915 BatState 0;
+BA_ "GenSigStartValue" SG_ 2556444915 BatAlmLv 0;
+BA_ "GenSigStartValue" SG_ 2556444915 BatLife 0;
+BA_ "GenSigStartValue" SG_ 2556510451 MaxCellVolt 0;
+BA_ "GenSigStartValue" SG_ 2556510451 MinCellVolt 0;
+BA_ "GenSigStartValue" SG_ 2556510451 MaxCellVoltNo 0;
+BA_ "GenSigStartValue" SG_ 2556510451 MinCellVoltNo 0;
+BA_ "GenSigStartValue" SG_ 2556575987 MaxTemp 40;
+BA_ "GenSigStartValue" SG_ 2556575987 MinTemp 40;
+BA_ "GenSigStartValue" SG_ 2556575987 MaxTempNo 0;
+BA_ "GenSigStartValue" SG_ 2556575987 MinTempNo 0;
+BA_ "GenSigStartValue" SG_ 2556575987 CoolingCtl 0;
+BA_ "GenSigStartValue" SG_ 2556575987 HeatingCtl 0;
+BA_ "GenSigStartValue" SG_ 2556641523 PosRlyStr 0;
+BA_ "GenSigStartValue" SG_ 2556641523 NegRlyStr 0;
+BA_ "GenSigStartValue" SG_ 2556641523 PreRlyStr 0;
+BA_ "GenSigStartValue" SG_ 2556641523 OnChrRlyStr 0;
+BA_ "GenSigStartValue" SG_ 2556641523 OffChrRlyStr 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrState 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrCommunication 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrOFFCC2 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrONCC 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrReqVolt 0;
+BA_ "GenSigStartValue" SG_ 2556641523 ChrReqCurr 0;
+BA_ "GenSigStartValue" SG_ 2556707059 MaxChrCurtLimit 0;
+BA_ "GenSigStartValue" SG_ 2556707059 MaxDisCurtLimit 0;
+BA_ "GenSigStartValue" SG_ 2556707059 MaxChrPowerLimit 0;
+BA_ "GenSigStartValue" SG_ 2556707059 MaxDisPowerLimit 0;
+
+

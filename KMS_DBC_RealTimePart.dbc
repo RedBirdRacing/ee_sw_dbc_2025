@@ -1,0 +1,281 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ BalSt 0 "均衡关闭" 1 "均衡开启" ;
+VAL_TABLE_ CheckHeatError 1 "加热故障" ;
+VAL_TABLE_ ReadLimitSt 1 "限流开启" ;
+VAL_TABLE_ HeatSt 1 "加热开启" ;
+VAL_TABLE_ KeyOffDsgMos 1 "开关控制放电MOS断开" ;
+VAL_TABLE_ KeyOffChgMos 1 "开关控制充电MOS断开" ;
+VAL_TABLE_ CommOffDsgMos 1 "通讯断开放电MOS" ;
+VAL_TABLE_ CommOffChgMos 1 "通讯断开充电MOS" ;
+VAL_TABLE_ PchFailed 1 "预充失败" ;
+VAL_TABLE_ AfePfDetSt 1 "高压禁止放电" ;
+VAL_TABLE_ ShortProtect 1 "短路保护" ;
+VAL_TABLE_ ThermalRunaway 3 "热失控3级" 2 "热失控2级" 1 "热失控1级" ;
+VAL_TABLE_ MosT_H 3 "Mos温度过高3级" 2 "Mos温度过高2级" 1 "Mos温度过高1级" ;
+VAL_TABLE_ Soh_L 3 "Soh过低3级" 2 "Soh过低2级" 1 "Soh过低1级" ;
+VAL_TABLE_ Soc_L 3 "SOC过低3级" 2 "SOC过低2级" 1 "SOC过低1级" ;
+VAL_TABLE_ Cur_DsgH 3 "放电电流过高3级" 2 "放电电流过高2级" 1 "放电电流过高1级" ;
+VAL_TABLE_ Cur_ChgH 3 "充电电流过高3级" 2 "充电电流过高2级" 1 "充电电流过高1级" ;
+VAL_TABLE_ SumV_L 3 "总压过低3级" 2 "总压过低2级" 1 "总压过低1级" ;
+VAL_TABLE_ SumV_H 3 "总压过高3级" 2 "总压过高2级" 1 "总压过高1级" ;
+VAL_TABLE_ DetalT_H 3 "温差过大3级" 2 "温差过大2级" 1 "温差过大1级" ;
+VAL_TABLE_ CellT_DsgL 3 "放电温度过低3级" 2 "放电温度过低2级" 1 "放电温度过低1级" ;
+VAL_TABLE_ CellT_DsgH 3 "放电温度过高3级" 2 "放电温度过高2级" 1 "放电温度过高1级" ;
+VAL_TABLE_ CellT_ChgL 3 "充电温度过低3级" 2 "充电温度过低2级" 1 "充电温度过低1级" ;
+VAL_TABLE_ CellT_ChgH 3 "充电温度过高3级" 2 "充电温度过高2级" 1 "充电温度过高1级" ;
+VAL_TABLE_ DetalV_H 3 "压差过大3级" 2 "压差过大2级" 1 "压差过大1级" ;
+VAL_TABLE_ CellV_L 3 "单体欠压3级" 2 "单体欠压2级" 1 "单体欠压1级" ;
+VAL_TABLE_ CellV_H 3 "单体过压3级" 2 "单体过压2级" 1 "单体过压1级" ;
+VAL_TABLE_ limit_cur_state 1 "开启限流" 0 "关闭限流" ;
+VAL_TABLE_ wakeup_source 16 "电流唤醒" 8 "CAN唤醒" 4 "485唤醒" 2 "按键唤醒" 1 "钥匙开关唤醒" ;
+VAL_TABLE_ DIState 1 "DI1输入高" ;
+VAL_TABLE_ DOState 3 "DO1输出ON，DO2输出ON" 2 "DO2输出ON，DO1输出OFF" 1 "DO1输出ON，DO2输出OFF" 0 "DO1输出OFF，DO2输出OFF" ;
+VAL_TABLE_ LoardDetect 1 "负载接入" 0 "负载断开" ;
+VAL_TABLE_ ChgDetect 1 "充电器接入" 0 "充电器断开" ;
+VAL_TABLE_ ChgDsgState 2 "放电状态" 1 "充电状态" 0 "静止状态" ;
+VAL_TABLE_ FanMosSt 1 "风扇MOS闭合" 0 "风扇MOS断开" ;
+VAL_TABLE_ HeatMosSt 1 "加热MOS闭合" 0 "加热MOS断开" ;
+VAL_TABLE_ PreMosSt 1 "预充MOS闭合" 0 "预充MOS断开" ;
+VAL_TABLE_ DMosSt 1 "放电MOS闭合" 0 "放电MOS断开" ;
+VAL_TABLE_ CMosSt 0 "充电MOS断开" 1 "充电MOS闭合" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ New_Signal_71 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ New_Signal_70 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 New_Message_20: 8 Vector__XXX
+ SG_ New_Signal_155 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2215542785 Fault_code: 8 Vector__XXX
+ SG_ ShortProtect m1 : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PchFailed m2 : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LimitSt m2 : 62|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ KeyOffDsgMos m2 : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ KeyOffChgMos m2 : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HeatSt m2 : 61|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ HeatError m2 : 63|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CommOffDsgMos m2 : 57|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CommOffChgMos m2 : 56|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AfePfDetSt m1 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ ThermalRunaway m2 : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SumV_L m1 : 43|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ SumV_H m1 : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Soh_L m1 : 59|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Soc_L m1 : 56|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ MosT_H m2 : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DetalV_H m1 : 16|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ DetalT_H m1 : 35|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Cur_DsgH m1 : 51|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Cur_ChgH m1 : 48|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellV_L m1 : 11|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellT_DsgL m1 : 32|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellT_DsgH m1 : 27|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellT_ChgL m1 : 24|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellT_ChgH m1 : 19|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ CellV_H m1 : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ Fault_FrameID M : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2215477249 LimitCur: 8 Vector__XXX
+ SG_ soh : 31|16@0+ (0.1,0) [0|255] "%" Vector__XXX
+ SG_ pwm_duty : 47|16@0+ (0.1,0) [0|65535] "%" Vector__XXX
+ SG_ limit_cur_state : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ limic_cur : 15|16@0+ (0.1,-3000) [-3000|3553.5] "" Vector__XXX
+
+BO_ 2215411713 Calendar: 6 Vector__XXX
+ SG_ Year : 0|8@1+ (1,2000) [2000|2255] "" Vector__XXX
+ SG_ Second : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Month : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Minute : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Hour : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Day : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2215346177 Charging_Message: 3 Vector__XXX
+ SG_ wakeup_source : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Rest_chg_time : 7|16@0+ (1,0) [0|65535] "分钟" Vector__XXX
+
+BO_ 2215280641 BalSt_Message: 8 Vector__XXX
+ SG_ BalBatter_9to16 : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BalBatter_25to32 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BalBatter_1to8 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BalBatter_17to24 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ balance_state : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Balance_cur : 23|16@0+ (1,0) [0|65535] "mA" Vector__XXX
+
+BO_ 2215149569 Status_Message2: 8 Vector__XXX
+ SG_ Remain_Capacity : 23|32@0+ (1,0) [0|4294967295] "mAh" Vector__XXX
+ SG_ ntc_number : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Cycle_Time : 55|16@0+ (1,0) [0|65535] "" Vector__XXX
+ SG_ Cell_Number : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2215084033 Status_Message1: 5 Vector__XXX
+ SG_ LoardDetect : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DOState : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DIState : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChgDetect : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ BatState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2215018497 Status_Message0: 5 Vector__XXX
+ SG_ PreMOSState : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ HeatMOSState : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ FanMOSState : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DisChgMOSState : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChgMOSState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2214952961 TempStatistics: 5 Vector__XXX
+ SG_ MinTNo : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MinT : 16|8@1+ (1,-40) [0|255] "" Vector__XXX
+ SG_ MaxTNo : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxT : 0|8@1+ (1,-40) [-40|215] "" Vector__XXX
+ SG_ DiffT : 32|8@1+ (1,0) [-40|215] "" Vector__XXX
+
+BO_ 2214887425 VoltStatistics: 8 Vector__XXX
+ SG_ MinV : 31|16@0+ (1,0) [0|255] "mv" Vector__XXX
+ SG_ Min_No : 40|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxV_No : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxV : 7|16@0+ (1,0) [0|255] "mv" Vector__XXX
+ SG_ DiffV : 55|16@0+ (1,0) [0|255] "mv" Vector__XXX
+
+BO_ 2214690817 CellTemp: 8 Vector__XXX
+ SG_ Temper7 m1 : 56|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper6 m1 : 48|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper5 m1 : 40|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper4 m1 : 32|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper3 m1 : 24|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper2 m1 : 16|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ Temper1 m1 : 8|8@1- (1,-40) [0|0] "°C" Vector__XXX
+ SG_ CellTempFrameId M : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2214625281 CellVolt: 8 Vector__XXX
+ SG_ Volt9 m3 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt8 m3 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt7 m3 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt6 m2 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt5 m2 : 31|16@0- (1,0) [-32768|32767] "mv" Vector__XXX
+ SG_ Volt24 m8 : 47|16@0- (1,0) [-32768|32767] "mv" Vector__XXX
+ SG_ Volt23 m8 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt22 m8 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt21 m7 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt20 m7 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt19 m7 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt18 m6 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt17 m6 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt16 m6 : 15|16@0- (1,0) [-32768|32767] "mv" Vector__XXX
+ SG_ Volt15 m5 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt14 m5 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt13 m5 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt12 m4 : 47|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt11 m4 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt10 m4 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt4 m2 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt3 m1 : 47|16@0- (1,0) [-32768|32767] "mv" Vector__XXX
+ SG_ Volt2 m1 : 31|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ Volt1 m1 : 15|16@0- (1,0) [0|0] "mv" Vector__XXX
+ SG_ CellVoltFrameId M : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 2214821889 Batter_SumSingal1: 8 Vector__XXX
+ SG_ Total_Energy : 23|16@0+ (1,0) [0|255] "WH" Vector__XXX
+ SG_ POWER : 7|16@0+ (1,0) [0|0] "W" Vector__XXX
+ SG_ MOS_Temp : 32|8@1+ (1,-40) [0|215] "°C" Vector__XXX
+ SG_ Heat_Temp : 48|8@1+ (1,-40) [0|215] "°C" Vector__XXX
+ SG_ Heat_Cur : 56|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ Board_Temp : 40|8@1+ (1,-40) [0|215] "°C" Vector__XXX
+
+BO_ 2214756353 Batter_SumSingal0: 7 Vector__XXX
+ SG_ SumV : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ SOC : 39|16@0+ (0.1,0) [0|0] "%" Vector__XXX
+ SG_ Life : 48|8@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Cur : 23|16@0+ (0.1,-3000) [-3000|-2974.5] "A" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "KMS_DBC_Model";
+VAL_ 2215542785 ShortProtect 1 "短路保护" ;
+VAL_ 2215542785 PchFailed 1 "预充失败" ;
+VAL_ 2215542785 LimitSt 1 "限流开启" ;
+VAL_ 2215542785 KeyOffDsgMos 1 "开关控制放电MOS断开" ;
+VAL_ 2215542785 HeatSt 1 "加热开启" ;
+VAL_ 2215542785 HeatError 1 "加热故障" ;
+VAL_ 2215542785 CommOffDsgMos 1 "通讯断开放电MOS" ;
+VAL_ 2215542785 CommOffChgMos 1 "通讯断开充电MOS" ;
+VAL_ 2215542785 AfePfDetSt 1 "高压禁止放电" ;
+VAL_ 2215542785 ThermalRunaway 3 "热失控3级" 2 "热失控2级" 1 "热失控1级" ;
+VAL_ 2215542785 SumV_L 3 "总压过低3级" 2 "总压过低2级" 1 "总压过低1级" ;
+VAL_ 2215542785 SumV_H 3 "总压过高3级" 2 "总压过高2级" 1 "总压过高1级" ;
+VAL_ 2215542785 Soh_L 3 "Soh过低3级" 2 "Soh过低2级" 1 "Soh过低1级" ;
+VAL_ 2215542785 Soc_L 3 "SOC过低3级" 2 "SOC过低2级" 1 "SOC过低1级" ;
+VAL_ 2215542785 MosT_H 3 "Mos温度过高3级" 2 "Mos温度过高2级" 1 "Mos温度过高1级" ;
+VAL_ 2215542785 DetalV_H 3 "压差过大3级" 2 "压差过大2级" 1 "压差过大1级" ;
+VAL_ 2215542785 DetalT_H 3 "温差过大3级" 2 "温差过大2级" 1 "温差过大1级" ;
+VAL_ 2215542785 Cur_DsgH 3 "放电电流过高3级" 2 "放电电流过高2级" 1 "放电电流过高1级" ;
+VAL_ 2215542785 Cur_ChgH 3 "充电电流过高3级" 2 "充电电流过高2级" 1 "充电电流过高1级" ;
+VAL_ 2215542785 CellV_L 3 "单体欠压3级" 2 "单体欠压2级" 1 "单体欠压1级" ;
+VAL_ 2215542785 CellT_DsgL 3 "放电温度过低3级" 2 "放电温度过低2级" 1 "放电温度过低1级" ;
+VAL_ 2215542785 CellT_DsgH 3 "放电温度过高3级" 2 "放电温度过高2级" 1 "放电温度过高1级" ;
+VAL_ 2215542785 CellT_ChgL 3 "充电温度过低3级" 2 "充电温度过低2级" 1 "充电温度过低1级" ;
+VAL_ 2215542785 CellT_ChgH 3 "充电温度过高3级" 2 "充电温度过高2级" 1 "充电温度过高1级" ;
+VAL_ 2215542785 CellV_H 3 "单体过压3级" 2 "单体过压2级" 1 "单体过压1级" ;
+VAL_ 2215477249 limit_cur_state 1 "开启限流" 0 "关闭限流" ;
+VAL_ 2215346177 wakeup_source 16 "电流唤醒" 8 "CAN唤醒" 4 "485唤醒" 2 "按键唤醒" 1 "钥匙开关唤醒" ;
+VAL_ 2215280641 balance_state 0 "均衡关闭" 1 "均衡开启" ;
+VAL_ 2215084033 LoardDetect 1 "负载接入" 0 "负载断开" ;
+VAL_ 2215084033 DOState 3 "DO1输出ON，DO2输出ON" 2 "DO2输出ON，DO1输出OFF" 1 "DO1输出ON，DO2输出OFF" 0 "DO1输出OFF，DO2输出OFF" ;
+VAL_ 2215084033 DIState 1 "DI1输入高" ;
+VAL_ 2215084033 ChgDetect 1 "充电器接入" 0 "充电器断开" ;
+VAL_ 2215084033 BatState 2 "放电状态" 1 "充电状态" 0 "静止状态" ;
+VAL_ 2215018497 PreMOSState 1 "预充MOS闭合" 0 "预充MOS断开" ;
+VAL_ 2215018497 HeatMOSState 1 "加热MOS闭合" 0 "加热MOS断开" ;
+VAL_ 2215018497 FanMOSState 1 "风扇MOS闭合" 0 "风扇MOS断开" ;
+VAL_ 2215018497 DisChgMOSState 1 "放电MOS闭合" 0 "放电MOS断开" ;
+VAL_ 2215018497 ChgMOSState 0 "充电MOS断开" 1 "充电MOS闭合" ;
+
