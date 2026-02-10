@@ -1,0 +1,55 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: 
+BO_ 2147485440 Vector__XXXMsg99: 6 Vector__XXX
+   SG_ accelX : 7|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ accelZ : 15|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ accelY : 23|8@0+ (1,0) [0|1] "" Vector__XXX
+   SG_ gyroX : 31|8@0- (1,0) [-12.5|12.5] "degree" Vector__XXX
+   SG_ gyroY : 39|8@0- (1,0) [-12.5|12.5] "deg" Vector__XXX
+   SG_ gyroZ : 47|8@0- (1,0) [-12.5|12.5] "dick" Vector__XXX
+
+BO_ 2147485520 Msg278: 6 Vector__XXX
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "matchingcriteria" INT 0 0;
+BA_DEF_ BO_ "filterlabeling" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "matchingcriteria" 0;
+BA_DEF_DEF_ "filterlabeling" 1;
+BA_ "GenMsgForegroundColor" BO_ 2147485440 "#000000";
+BA_ "GenMsgForegroundColor" BO_ 2147485520 "#000000";
